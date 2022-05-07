@@ -1,0 +1,53 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Calculator
+{
+    private int a,sum,dif,prod;
+    private int b;
+    private double quotient;
+    public void setValue(int x,int y)
+    {
+        a=x;
+        b=y;
+    }
+     public int getValueInt()
+     {
+        return a;
+     }
+     public int getValueNt()
+     {
+        return b;
+     }
+     public void Calculator()
+    {
+        sum=a+b;
+        prod=a*b;
+        if (a>b)
+        {
+            dif=a-b;
+            quotient=a/b;
+        }else{
+            dif=b-a;
+            quotient=b/a;
+        }
+        System.out.println("Sum= "+sum);
+        System.out.println("Product= "+prod);
+        System.out.println("Difference= "+dif);
+        System.out.println("Quotient= "+quotient);
+    }
+}
+class Codechef
+{
+	public static void main (String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter two numbers: ");
+		Calculator s1=new Calculator();
+		int n=sc.nextInt();
+		int k=sc.nextInt();
+		s1.setValue(n,k);
+		s1.Calculator();
+	}
+}
