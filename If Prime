@@ -1,0 +1,45 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Prime
+{
+    private int number;
+    private int f;
+    public void setValue(int x)
+    {
+        number=x;
+    }
+     public int getValueInt()
+     {
+         return number;
+     }
+     public void Prime()
+    {
+        for (int i=1;i<=number;i++)
+        {
+            if (number % i==0)
+            {
+                f=f+1;
+            }
+        }
+        if (f<=2)
+        {
+            System.out.println("This number is a Prime number");
+        }else{
+            System.out.println("This number is a Composite number");
+        }
+    }
+}
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		Prime s1=new Prime();
+		int n=sc.nextInt();
+		s1.setValue(n);
+		s1.Prime();
+	}
+}
