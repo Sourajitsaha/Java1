@@ -1,0 +1,37 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class OddEven
+{
+    private int bumber;
+    public void setValue(int x)
+    {
+        bumber=x;
+    }
+    public int getValueInt()
+    {
+        return bumber;
+    }
+    public void OddEven()
+    {
+        if (bumber % 2==0)
+        {
+            System.out.println("The number is even");
+        }else{
+            System.out.println("The number is odd");
+        }
+    }
+}
+class Codechef
+{
+	public static void main (String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number");
+		OddEven s1=new OddEven();
+		int n=sc.nextInt();
+		s1.setValue(n);
+		s1.OddEven();
+	}
+}
